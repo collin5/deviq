@@ -1,5 +1,5 @@
 # DevIQ
-Opensource tool to practise coding challenges and assessing engineers
+Opensource tool for assessing engineers
 
 **still a WIP**
 
