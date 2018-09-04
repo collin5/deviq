@@ -1,4 +1,4 @@
-# CodeIQ
+# DevIQ
 Opensource tool to practise coding challenges and assessing engineers
 
 **still a WIP**

@@ -1,8 +1,0 @@
-[package]
-name = "qa"
-version = "0.1.0"
-authors = ["Collins Abitekaniza <abtcolns@gmail.com>"]
-
-[dependencies]
-rocket = "0.3.14"
-rocket_codegen = "0.3.14"
