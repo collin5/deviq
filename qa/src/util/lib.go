@@ -20,7 +20,7 @@ func NewContainer(name string, lang string) *Container {
 	return &Container{name, lang}
 }
 
-func (c *Container) Run(code string, tests string) (io.Reader, error) {
-	cmd := exec.Command("/usr/local/bin/docker", "run", image[c.lang], code, tests)
+func (c *Container) Run(code string, spec string) (io.Reader, error) {
+	cmd := exec.Command("/usr/local/bin/docker", "run", image[c.lang], code, spec)
 	return pty.Start(cmd)
 }
