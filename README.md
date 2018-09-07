@@ -1,4 +1,4 @@
-# DevIQ
+# Proctor
 Opensource tool for assessing engineers
 
 **still a WIP**
