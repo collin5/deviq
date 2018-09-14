@@ -8,8 +8,8 @@ import (
 )
 
 type Container struct {
-	name string
-	lang string
+	Name string
+	Lang string
 }
 
 var image = map[string]string{
@@ -21,6 +21,6 @@ func NewContainer(name string, lang string) *Container {
 }
 
 func (c *Container) Run(code string, spec string) (io.Reader, error) {
-	cmd := exec.Command("/usr/local/bin/docker", "run", image[c.lang], code, spec)
+	cmd := exec.Command("/usr/local/bin/docker", "run", image[c.Lang], code, spec)
 	return pty.Start(cmd)
 }
