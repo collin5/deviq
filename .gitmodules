@@ -1,0 +1,3 @@
+[submodule "qa/src/lib/pty"]
+	path = qa/src/lib/pty
+	url = https://github.com/kr/pty.git

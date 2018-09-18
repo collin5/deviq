@@ -4,8 +4,7 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
-
-	"../util"
+	"util"
 )
 
 type Query struct {
@@ -14,7 +13,7 @@ type Query struct {
 	Spec string `json:"spec"`
 }
 
-func (q *Query) Exec(w http.ResponseWriter) {
+var Exec = func(q *Query, w http.ResponseWriter) {
 	cont := util.NewContainer("blahblah", q.Lang)
 	out, err := cont.Run(q.Code, q.Spec)
 	if err != nil {
@@ -32,5 +31,5 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-	query.Exec(w)
+	go Exec(&query, w)
 }
