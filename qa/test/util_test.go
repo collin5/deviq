@@ -2,8 +2,7 @@ package test
 
 import (
 	"testing"
-
-	"../src/util"
+	"util"
 )
 
 func TestNewContainer(t *testing.T) {

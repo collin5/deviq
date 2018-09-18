@@ -2,9 +2,8 @@ package util
 
 import (
 	"io"
+	"lib/pty"
 	"os/exec"
-
-	"github.com/kr/pty"
 )
 
 type Container struct {
