@@ -1,0 +1,10 @@
+matrix:
+  include:
+    - go: 1.9.2
+      env:
+        - SERVICE=QA
+        - TEST_DIR=qa/test
+  fast_finish: true
+
+script:
+  - if [ "$SERVICE" = "QA" ]; then cd $TEST_DIR && go test -v ./... --pkgdir ../pkg; fi
