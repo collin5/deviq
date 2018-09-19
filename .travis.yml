@@ -2,9 +2,14 @@ matrix:
   include:
     - go: 1.9.2
       env:
+        - BUILD_DIR=qa/
         - SERVICE=QA
-        - TEST_DIR=qa/test
+        - TEST_DIR=test/
   fast_finish: true
+
+install:
+  - export GOPATH=$TRAVIS_BUILD_DIR/qa/
+  - cd $BUILD_DIR && make all
 
 script:
   - if [ "$SERVICE" = "QA" ]; then cd $TEST_DIR && go test -v ./... --pkgdir ../pkg; fi
